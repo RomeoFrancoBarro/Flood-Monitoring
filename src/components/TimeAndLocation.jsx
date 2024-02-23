@@ -14,10 +14,6 @@ function TimeAndLocation({ latitude, longitude }) {
   function getCurrentTime() {
     const currentDate = new Date();
     const options = {
-      /*weekday: 'long',
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',*/
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric', // Include seconds
@@ -47,11 +43,11 @@ function TimeAndLocation({ latitude, longitude }) {
   }
 
   return (
-    <div>
-      <div className="flex items-center justify-center my-6">
+    <div className="text-center"> {/* Center content */}
+      <div className="my-6">
         <p className="text-white text-xl font-extralight">{currentTime}</p>
       </div>
-      <div className="flex items-center justify-center my-3">
+      <div className="my-3">
         <p className="text-white text-3xl font-medium">{checkCity()}</p>
       </div>
     </div>
