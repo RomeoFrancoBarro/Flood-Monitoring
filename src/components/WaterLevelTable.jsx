@@ -42,13 +42,13 @@ class WaterLevelTable extends React.Component {
                         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                             <thead className="text-xs text-white uppercase bg-blue-500">
                                 <tr>
-                                    <th scope="col" className="px-6 py-3">
+                                    <th scope="col" className="px-4 sm:px-6 py-3"> {/* Reduced padding on small screens */}
                                         Date
                                     </th>
-                                    <th scope="col" className="px-6 py-3">
+                                    <th scope="col" className="px-4 sm:px-6 py-3"> {/* Reduced padding on small screens */}
                                         Time
                                     </th>
-                                    <th scope="col" className="px-6 py-3">
+                                    <th scope="col" className="px-4 sm:px-6 py-3"> {/* Reduced padding on small screens */}
                                         Status
                                     </th>
                                 </tr>
@@ -57,13 +57,13 @@ class WaterLevelTable extends React.Component {
                                 {this.state.tableData.map((row, index) => {
                                     return (
                                         <tr key={row.key} className="border-b border-gray-700 font-medium text-gray-900 whitespace-nowrap bg-gray-50">
-                                            <th scope="row" className="px-6 py-4">
+                                            <th scope="row" className="px-4 sm:px-6 py-4"> {/* Reduced padding on small screens */}
                                                 {row.key.split(" ")[0]}
                                             </th>
-                                            <td className="px-6 py-4">
+                                            <td className="px-4 sm:px-6 py-4"> {/* Reduced padding on small screens */}
                                                 {row.key.split(" ")[1]}
                                             </td>
-                                            <td className={`px-6 py-4 ${row.data.Status === 'LOW' ? 'bg-yellow-300' : row.data.Status === 'MODERATE' ? 'bg-orange-300' : row.data.Status === 'HIGH' ? 'bg-red-300 ' : ''}`}>
+                                            <td className={`px-4 sm:px-6 py-4 ${row.data.Status === 'LOW' ? 'bg-yellow-300' : row.data.Status === 'MODERATE' ? 'bg-orange-300' : row.data.Status === 'HIGH' ? 'bg-red-300 ' : ''}`}> {/* Reduced padding on small screens */}
                                                 {row.data.Status}
                                             </td>
                                         </tr>
